@@ -1,0 +1,79 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  color: rgb(83, 83, 83);
+  padding: 15px 30px;
+}
+
+/* Left side (logo + nav) */
+.left-side {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 25px;
+}
+
+/* Navigation */
+.nav-links a {
+  color: rgb(83, 83, 83);
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00aaff;
+}
+
+/* Auth buttons */
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.login {
+  background: #444;
+  color: white;
+}
+
+.login:hover {
+  background: #666;
+}
+
+.signup {
+  background: #00aaff;
+  color: white;
+}
+
+.signup:hover {
+  background: #0088cc;
+}
+.nav-links a.active {
+  text-decoration: underline;
+  color: #00aaff;
+}
