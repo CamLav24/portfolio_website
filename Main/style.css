@@ -32,6 +32,15 @@ body {
   margin-right: 25px;
 }
 
+/* Make main page H1 match the header logo styling */
+.content h1 {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: inherit; /* uses the same font as the rest of the site */
+  color: rgb(83, 83, 83);
+  margin-bottom: 10px;
+}
+
 /* Navigation */
 .nav-links a {
   color: rgb(83, 83, 83);
@@ -76,4 +85,121 @@ body {
 .nav-links a.active {
   text-decoration: underline;
   color: #00aaff;
+}
+/* Content wrapper */
+.content {
+  padding: 20px 30px; /* matches the header's side padding */
+}
+
+/* Hero image styling */
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+.hero img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .hero img {
+    max-height: 220px;
+  }
+}
+
+/* Cards grid: three columns, titles on top and content below. Each column grows with its own content. */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  align-items: start; /* prevents grid items from stretching to equal height */
+}
+
+.card { 
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column; /* keeps title on top, body below */
+}
+
+
+/* Allow cards to have changeable backgrounds via CSS variable --card-bg */
+.card {
+  /* default uses a solid color; use var(--card-bg) to override with color, gradient, or image */
+  background: var(--card-bg, #fff);
+  color: var(--card-color, inherit);
+}
+
+/* Example background utility classes */
+.card--blue { --card-bg: linear-gradient(135deg,#e6f2ff,#cfe9ff); --card-color: #03314b; }
+.card--soft { --card-bg: #fffaf0; --card-color: #3b2b1a; }
+.card--image { --card-bg: url('../images/pattern.png') center/cover no-repeat; color: white; }
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+}
+
+.card-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  fill: #333;
+  flex-shrink: 0;
+}
+
+.card-body {
+  flex: 1 1 auto; /* allows body to grow naturally */
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Social / auth buttons styled as links */
+.auth-buttons .btn {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 8px 14px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.btn-discord {
+  background: #5865F2; /* Discord blurple */
+}
+.btn-discord:hover {
+  background: #4752c4;
+}
+
+.btn-linkedin {
+  background: #0077B5; /* LinkedIn blue */
+}
+.btn-linkedin:hover {
+  background: #005f8d;
 }
