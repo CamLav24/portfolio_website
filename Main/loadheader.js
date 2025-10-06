@@ -13,4 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
+  
+  // load shared footer
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      const footerContainer = document.getElementById("footer");
+      if (footerContainer) footerContainer.innerHTML = data;
+
+      // update footer year dynamically
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    });
 });
