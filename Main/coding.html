@@ -9,7 +9,9 @@
 <body>
   <!-- Header will load here -->
   <div id="header"></div>
-
+  <div class = "hero">
+    <img src="images/actual cannibal shia LaBeouf.png" alt="CDL banner" loading="lazy">
+  </div>
   <!-- Main content -->
   <main class="content">
     <h1>Coding Projects</h1>
@@ -18,17 +20,55 @@
 
     <section>
       <h2>Recent Projects</h2>
-      <ul>
-        <li>✔️ Portfolio Website</li>
-        <li>✔️ JavaScript Game</li>
-        <li>✔️ Python Automation Script</li>
-      </ul>
+
+      <!-- Two-column stacked layout: left and right columns that each stack cards vertically -->
+      <div class="cards-two-col">
+        <div class="cards-col">
+          <!-- left column cards -->
+          <article class="card card--blue">
+            <h2 class="card-title">
+              <img class="card-icon" src="images/placeholder-code.png" alt="Coding icon">
+              Coding Projects
+            </h2>
+            <div class="card-body">
+              <p>Short description. This column can grow depending on how much text you add here. Add links or lists as needed.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <h2 class="card-title">
+              <img class="card-icon" src="images/placeholder-3d.png" alt="3D icon">
+              3D Prints
+            </h2>
+            <div class="card-body">
+              <p>Models, prints, and process notes. Short content here.</p>
+              <p>Models, prints, and process notes. Short content here.</p>
+              <p>Models, prints, and process notes. Short content here.</p>
+              <p>Models, prints, and process notes. Short content here.</p>
+              
+            </div>
+          </article>
+        </div>
+
+        <div class="cards-col">
+          <!-- right column cards -->
+          <article class="card" style="--card-bg: linear-gradient(135deg,#e6ecb3,#00ffc8); --card-color: #3b2b1a;">
+            <h2 class="card-title">
+              <img class="card-icon" src="images/placeholder-art.png" alt="Art icon">
+              Art Portfolio
+            </h2>
+            <div class="card-body">
+              <p>Artwork, sketches and galleries. This card contains a bit more content to demonstrate independent column heights that expand naturally with the text.</p>
+              <p>Additional paragraph to make this taller than the others.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
     </section>
   </main>
 
-  <script src="loadheader.js"></script>
-</main>
-<div id="footer"></div>
+  <div id="footer"></div>
   <script src="loadheader.js"></script>
 </body>
 </html>

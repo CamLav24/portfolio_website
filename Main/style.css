@@ -232,3 +232,28 @@ body {
 .site-footer .footer-contact {
   margin-top: 8px;
 }
+
+/* Two-column stacked cards layout for coding page */
+.cards-two-col {
+  display: flex;
+  gap: 24px; /* space between left and right stacks */
+  margin-top: 16px;
+}
+.cards-col {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* spacing between stacked cards */
+}
+
+/* keep cards full width inside each column and respect padding from .content */
+.cards-col .card {
+  width: 100%;
+  margin: 0; /* spacing handled by column gap */
+}
+
+@media (max-width: 900px) {
+  .cards-two-col {
+    flex-direction: column;
+  }
+}
